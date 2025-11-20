@@ -1,26 +1,20 @@
+
 public class Main {
     public static void main(String[] args) {
         
-        Libro libro1 = new Libro("El Quijote", "Miguel de Cervantes", 5, 3);
+        CommissionEmployee empleado1 = new CommissionEmployee(
+            "Juan", "Perez", "111-11-111", 10000, 0.06);
 
         
-        System.out.println(libro1);
+        BasePlusCommissionEmployee empleado2 = new BasePlusCommissionEmployee(
+            "Maria", "Gomez", "222-22-222", 5000, 0.04, 300);
 
-       
-        if (libro1.prestar()) {
-            System.out.println("Se ha prestado un ejemplar.");
-        } else {
-            System.out.println("No hay ejemplares disponibles para préstamo.");
-        }
+        System.out.println("--- Información Empleado 1 ---");
+        System.out.println(empleado1);
+        System.out.println("Ingresos totales: $" + empleado1.ingresos());
 
-        
-        if (libro1.devolver()) {
-            System.out.println("Se ha devuelto un ejemplar.");
-        } else {
-            System.out.println("No hay ejemplares prestados para devolver.");
-        }
-
-        
-        System.out.println(libro1);
+        System.out.println("\n--- Información Empleado 2 ---");
+        System.out.println(empleado2); 
+        System.out.println("Ingresos totales: $" + empleado2.ingresos());
     }
 }
